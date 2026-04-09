@@ -1,11 +1,13 @@
 package controleur;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import personnages.Chef;
+import personnages.Gaulois;
 import villagegaulois.Village;
 
 class ControlAfficherVillageTest {
@@ -18,6 +20,7 @@ class ControlAfficherVillageTest {
 		village= new Village("le village des irréductibles",10,5);
 		abraracourcix= new Chef("Abraracourcix",10,village);
 		village.setChef(abraracourcix);
+		
 	}
 	
 
@@ -29,17 +32,20 @@ class ControlAfficherVillageTest {
 
 	@Test
 	void testDonnerNomsVillageois() {
-		fail("Not yet implemented");
+		ControlAfficherVillage controlAfficherVillage= new ControlAfficherVillage(village);
+		assertEquals("Abraracourcix" , controlAfficherVillage.donnerNomsVillageois()[0]);
 	}
 
 	@Test
 	void testDonnerNomVillage() {
-		fail("Not yet implemented");
+		ControlAfficherVillage controlAfficherVillage= new ControlAfficherVillage(village);
+		assertEquals("le village des irréductibles",controlAfficherVillage.donnerNomVillage());
 	}
 
 	@Test
 	void testDonnerNbEtals() {
-		fail("Not yet implemented");
+		ControlAfficherVillage controlAfficherVillage= new ControlAfficherVillage(village);
+		assertEquals(5, controlAfficherVillage.donnerNbEtals() );
 	}
 
 }

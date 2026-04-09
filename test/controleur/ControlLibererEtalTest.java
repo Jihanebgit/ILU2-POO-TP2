@@ -22,7 +22,8 @@ class ControlLibererEtalTest {
 	
 	@Test
 	void testControlLibererEtal() {
-		ControlLibererEtal controlLibererEtal = new ControlLibererEtal(null)
+		ControlLibererEtal controlLibererEtal = new ControlLibererEtal(null);
+		fail("Not yet implemented");
 	}
 
 	@Test
