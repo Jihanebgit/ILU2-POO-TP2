@@ -38,9 +38,9 @@ public class Village {
 			gaulois = chef;
 		} else {
 			for (int i = 0; i < nbVillageois; i++) {
-				Gaulois habitant = villageois[i];
-				if (habitant.getNom().equals(nomGaulois)) {
-					gaulois = habitant;
+				Gaulois nomHabitant = villageois[i];
+				if (nomHabitant.getNom().equals(nomGaulois)) {
+					gaulois = nomHabitant;
 				}
 			}
 		}
