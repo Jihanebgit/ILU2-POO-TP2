@@ -1,6 +1,7 @@
 package frontiere;
 
 import controleur.ControlLibererEtal;
+import villagegaulois.Etal;
 
 public class BoundaryLibererEtal {
 	private ControlLibererEtal controlLibererEtal;
@@ -11,6 +12,23 @@ public class BoundaryLibererEtal {
 
 	public void libererEtal(String nomVendeur) {
 		//TODO a completer
+		Boolean vendeurReconnu= controlLibererEtal.isVendeur(nomVendeur);
+		if (!vendeurReconnu) {
+			System.out.println("Mais vous n'êtes pas inscrit sur notre "
+					+ "marché aujourd'hui !");
+
+		}else {
+			String[] donneesEtal =controlLibererEtal.libererEtal(nomVendeur);
+			Boolean etalOccupe=Boolean.valueOf(donneesEtal[0]);
+			String produit= donneesEtal[2];
+			int quantiteInitial=Integer.valueOf(donneesEtal[3]);
+			int quantiteVendu= Integer.valueOf(donneesEtal[4]);
+			if (etalOccupe) {
+				System.out.println("Vous avez vendu "+ quantiteVendu+
+						" sur "+quantiteInitial+" "+produit+".");
+				System.out.println("Au revoir "+nomVendeur+", passez une bonne journée");
+			}
+		}
 	}
 
 }
