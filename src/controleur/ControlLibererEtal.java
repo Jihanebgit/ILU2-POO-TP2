@@ -10,7 +10,6 @@ public class ControlLibererEtal {
 		this.controlTrouverEtalVendeur = controlTrouverEtalVendeur;
 	}
 
-	//TODO a completer
 
 	/**
 	 * 
@@ -28,8 +27,8 @@ public class ControlLibererEtal {
 		Boolean etalOccupe=etal.isEtalOccupe();
 		String[] donneesVentes=etal.etatEtal();
 		String produit= donneesVentes[2];
-		int quantiteInitial=Integer.valueOf(donneesVentes[3]);
-		int quantiteVendu=Integer.valueOf(donneesVentes[4]);
+		int quantiteInitial=Integer.parseInt(donneesVentes[3]);
+		int quantiteVendu=Integer.parseInt(donneesVentes[4]);
 		donneesEtal[0]=etalOccupe.toString();
 		donneesEtal[1]=nomVendeur;
 		donneesEtal[2]=produit;

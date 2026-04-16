@@ -8,14 +8,15 @@ public class BoundaryPrendreEtal {
 	public BoundaryPrendreEtal(ControlPrendreEtal controlChercherEtal) {
 		this.controlPrendreEtal = controlChercherEtal;
 	}
+	// revoir le design ( en gros ca doit être plus propre) 
 	
 	public void prendreEtal(String nomVendeur) {
-		Boolean nomVendeurConnu =controlPrendreEtal.verifierIdentite(nomVendeur);
+		boolean nomVendeurConnu =controlPrendreEtal.verifierIdentite(nomVendeur);
 		if (!nomVendeurConnu) {
 			System.out.println("Je suis désolée "+nomVendeur+" mais il faut être un habitant de notre village pour commercer ici.");
 		} else {
 			System.out.println("Bonjour "+nomVendeur+", je vais regarder si je peux vous trouver un étal.");
-			Boolean etalDisponible =controlPrendreEtal.resteEtals();
+			boolean etalDisponible =controlPrendreEtal.resteEtals();
 			
 			if (!etalDisponible) {
 				System.out.println("Désolée "+nomVendeur+" je n'ai plus d'étal qui ne soit pas déjà occupé.");

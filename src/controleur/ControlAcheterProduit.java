@@ -3,6 +3,7 @@ package controleur;
 import personnages.Gaulois;
 import villagegaulois.Etal;
 import villagegaulois.Village;
+// TODO REVOIR ACHETER PRODUIT *PAR RAPPORT* AU TESTCONTROLEUREDESCAS 
 
 public class ControlAcheterProduit {
 	private Village village;
@@ -53,7 +54,7 @@ public class ControlAcheterProduit {
 	public int quantiteProduit(Etal etal) {
 		return etal.getQuantite();
 	}
-	
+	// REVOIR CETTE METHODE AVEC LE TESTCONTROLEURDESCAS 
 	public String acheterProduit(String nomVendeur, String nomAcheteur, String produit, int nbProduit) {
 	    Etal etal = trouverEtalVendeur(nomVendeur);
 	    int quantiteDispo = etal.getQuantite();
