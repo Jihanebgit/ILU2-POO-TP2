@@ -23,10 +23,7 @@ public class BoundaryPrendreEtal {
 			} else {
 				installerVendeur(nomVendeur);
 			}
-			
-		}
-
-		}
+		}}
 
 	private void installerVendeur(String nomVendeur) {
 		System.out.println("C'est parfait, il me reste un étal pour vous !");
