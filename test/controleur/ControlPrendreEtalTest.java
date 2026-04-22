@@ -49,12 +49,20 @@ class ControlPrendreEtalTest {
 
 	@Test
 	void testPrendreEtal() {
-		fail("Not yet implemented");
+		ControlPrendreEtal controlPrendreEtal=new ControlPrendreEtal(ControlVerifierIdentite, village);
+		Gaulois bonemine= new Gaulois("Bonemine", 2);
+		assertEquals(0, controlPrendreEtal.prendreEtal("Bonemine", "fleurs", 10));
 	}
 
 	@Test
 	void testVerifierIdentite() {
-		fail("Not yet implemented");
+		ControlPrendreEtal controlPrendreEtal=new ControlPrendreEtal(ControlVerifierIdentite, village);
+		Gaulois bonemine= new Gaulois("Bonemine", 2);
+		village.ajouterHabitant(bonemine);
+		village.installerVendeur(bonemine, "fleurs", 14);
+		assertTrue(controlPrendreEtal.verifierIdentite("Bonemine"));
+		assertFalse(controlPrendreEtal.verifierIdentite("nom inconnu"));
+		
 	}
 
 }

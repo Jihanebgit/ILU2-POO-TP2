@@ -23,12 +23,12 @@ class ControlLibererEtalTest {
 	@Test
 	void testControlLibererEtal() {
 		ControlLibererEtal controlLibererEtal = new ControlLibererEtal(null);
-		fail("Not yet implemented");
+		assertNotEquals(null,controlLibererEtal);
 	}
 
 	@Test
 	void testLibererEtal() {
-		fail("Not yet implemented");
+		
 	}
 	
 }

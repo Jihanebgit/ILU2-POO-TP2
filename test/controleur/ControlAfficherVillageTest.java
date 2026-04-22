@@ -34,18 +34,21 @@ class ControlAfficherVillageTest {
 	void testDonnerNomsVillageois() {
 		ControlAfficherVillage controlAfficherVillage= new ControlAfficherVillage(village);
 		assertEquals("Abraracourcix" , controlAfficherVillage.donnerNomsVillageois()[0]);
+		assertNotEquals("un autre nom",controlAfficherVillage.donnerNomsVillageois()[0]);
 	}
 
 	@Test
 	void testDonnerNomVillage() {
 		ControlAfficherVillage controlAfficherVillage= new ControlAfficherVillage(village);
 		assertEquals("le village des irréductibles",controlAfficherVillage.donnerNomVillage());
+		assertNotEquals("un autre nom",controlAfficherVillage.donnerNomVillage());
 	}
-
+	
 	@Test
 	void testDonnerNbEtals() {
 		ControlAfficherVillage controlAfficherVillage= new ControlAfficherVillage(village);
 		assertEquals(5, controlAfficherVillage.donnerNbEtals() );
+		assertNotEquals(2, controlAfficherVillage.donnerNbEtals());
 	}
 
 }

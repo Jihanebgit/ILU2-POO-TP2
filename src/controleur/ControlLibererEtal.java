@@ -29,12 +29,13 @@ public class ControlLibererEtal {
 		String produit= donneesVentes[2];
 		int quantiteInitial=Integer.parseInt(donneesVentes[3]);
 		int quantiteVendu=Integer.parseInt(donneesVentes[4]);
-		donneesEtal[0]=etalOccupe.toString();
-		donneesEtal[1]=nomVendeur;
-		donneesEtal[2]=produit;
-		donneesEtal[3]=Integer.toString(quantiteInitial);
-		donneesEtal[4]=Integer.toString(quantiteVendu);
-		return donneesEtal;
+		
+		donneesEtal[0]=etalOccupe.toString();	//boolean en string de vide ou non 
+		donneesEtal[1]=nomVendeur;	// nom du vendeur 
+		donneesEtal[2]=produit;	// nom du produit 
+		donneesEtal[3]=Integer.toString(quantiteInitial);	// quantite au debut 
+		donneesEtal[4]=Integer.toString(quantiteVendu);	// quantite vendu après
+		return donneesEtal; //un tableau avec les donnees de l'etal 
 	}
 
 	public boolean isVendeur(String nomVendeur) {
